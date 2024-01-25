@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Special Birthday Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #3498db;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+        
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Happy Birthday, Harshika!</h1>
+        <p id="countdown"></p>
+    </header>
+
+    <main>
+        <section id="photoGallery">
+            <img src="IMG_20240112_151502.jpg" alt=""> 
+            <img src="Screenshot_20240121_135235.jpg" alt="">
+            <!-- Add your photos here -->
+        </section>
+
+        <section id="wishes">
+            <h2>Birthday Wishes</h2>
+            <p>Happy birthday! Please leave your wishes below:</p>
+            <form>
+                <label for="birthdayWish">Your Birthday Wish:</label><br>
+                <textarea id="birthdayWish" name="birthdayWish" rows="4" cols="50"></textarea><br>
+                <button type="submit">Submit Wish</button>
+            </form>
+        </section>
+
+        <!-- Add more personalized sections as needed -->
+
+        <!-- Birthday Soundtrack -->
+        <audio controls>
+            <source src="happy-birthday-to-you-bossa-nova-style-arrangement-21399.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+    </main>
+
+    <!-- Include jQuery locally -->
+    <script src="jquery-3.6.4.min.js"></script>
+    
+    <!-- Countdown timer script -->
+    <script>
+        const birthdayDate = new Date('2024-01-25');
+        const countdownElement = document.getElementById('countdown');
+
+        function updateCountdown() {
+            const currentDate = new Date();
+            const timeDiff = birthdayDate - currentDate;
+
+            const days = Math.floor(timeDiff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeDiff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeDiff % (1000 * 60 * 60)) / (1000 * 60));
+
+            countdownElement.textContent = `Countdown: ${days} days, ${hours} hours, ${minutes} minutes`;
+        }
+
+        // Update countdown every minute
+        setInterval(updateCountdown, 60000);
+    </script>
+</body>
+</html>
