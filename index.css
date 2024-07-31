@@ -1,0 +1,143 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: url('koeniggseg.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 1em 0;
+    text-align: center;
+}
+
+.header-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 0;
+    color: #f39c12;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.login-container {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-container h2 {
+    margin-bottom: 20px;
+    color: #f39c12;
+    font-size: 2em;
+    text-align: center;
+}
+
+.login-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.login-container label {
+    margin-bottom: 5px;
+    color: #f39c12;
+}
+
+.login-container input {
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background: #333;
+    color: #fff;
+}
+
+.login-container button {
+    padding: 10px;
+    font-size: 16px;
+    background-color: #f39c12;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+    background-color: #e67e22;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+@media (max-width: 768px) {
+    .login-container, .blog-list, main {
+        width: 90%;
+        padding: 10px;
+    }
+
+    header, footer {
+        padding: 0.5em;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    .login-container h2 {
+        font-size: 1.5em;
+    }
+
+    .login-container input, .login-container button {
+        font-size: 14px;
+    }
+}
+/* Navigation Styles */
+nav ul {
+    list-style-type: none; /* Remove default list styling */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+}
+
+nav ul li {
+    display: inline; /* Display list items in a horizontal line */
+    margin: 0 10px; /* Add spacing between list items */
+}
+
+nav ul li a {
+    color: white; /* Color for navigation links */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1em; /* Adjust font size to match theme */
+}
+
+nav ul li a:hover {
+    text-decoration: none; /* Add underline on hover */
+    color: #e67e22; /* Change color on hover */
+}
